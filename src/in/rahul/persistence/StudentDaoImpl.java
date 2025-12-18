@@ -43,7 +43,7 @@ public class StudentDaoImpl implements RStudentDao {
     @Override
     public String deleteStudent(Integer sid) {
 
-        String DELETEQUERY = "DELETE FROM student WHERE sid=?";
+        String DELETEQUERY = "DELETE FROM student WHERE sId=?";
 
         try {
             Connection con = DriverManager.getConnection(DBURL, DBUSERNAME, DBPASSWORD);
@@ -95,7 +95,7 @@ public class StudentDaoImpl implements RStudentDao {
     @Override
     public String updateStudent(Integer sid, String sname, Integer sage, String saddress) {
 
-        String UPDATEQUERY = "UPDATE student SET sname=?, sage=?, saddress=? WHERE sid=?";
+        String UPDATEQUERY = "UPDATE student SET sname=?, sage=?, saddress=? WHERE sId=?";
 
         try {
             Connection con = DriverManager.getConnection(DBURL, DBUSERNAME, DBPASSWORD);
